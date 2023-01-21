@@ -56,15 +56,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   &::selection {
-    background: $highlight-bg;
     color: $highlight-fg;
+    background: $highlight-bg;
   }
 
-  @media (prefers-color-scheme: dark) {
-    background-color: $black; // 1
-  }
   @media (prefers-color-scheme: light) {
-    background-color: $white; // 1
+    color: $black;
+    background-color: $white;
+  }
+  @media (prefers-color-scheme: dark) {
+    color: $white;
+    background-color: $black;
   }
 
   @include bp-max(sm) {

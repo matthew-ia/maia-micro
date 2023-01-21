@@ -74,23 +74,46 @@
 button, 
 a {
   // Theme
-  $color: $canvas;
-  $bg-color: $blue;
+  // Default (fallback)
+  $color: $white;
+  $bg-color: $black;
   $border: $border-width solid transparent;
-  $hover-bg-color: $blue-500;
+  $hover-bg-color: rgba($black, 0.9);
   $active-bg-color: $blue-600;
-  $focus-outline: 2px solid $purple;
+  $focus-outline: 2px solid $blue-600;
   $disabled-bg-color: $gray-100;
+  // Light
+  @media (prefers-color-scheme: light) {
+    $color: $white;
+    $bg-color: $black;
+    $border: $border-width solid transparent;
+    $hover-bg-color: rgba($black, 0.9);
+    $active-bg-color: $blue-600;
+    $focus-outline: 2px solid $blue-600;
+    $disabled-bg-color: $gray-100;
+  }
+  // Dark
+  @media (prefers-color-scheme: dark) {
+    $color: $black;
+    $bg-color: $white;
+    $border: $border-width solid transparent;
+    $hover-bg-color: rgba($white, 0.9);
+    $active-bg-color: $blue-600;
+    $focus-outline: 2px solid $blue-100;
+    $disabled-bg-color: $gray-100;
+  }
 
   color: $color;
   background-color: $bg-color;
   border: $border;
   border-radius: $border-radius;
-  padding: 10px 26px;
+  padding: .5rem 1.75rem .5rem 2rem;
   outline: 0;
   transition: $animate-faster;
   text-decoration: none;
   display: inline-block;
+  font-size: 2rem;
+  font-weight: 600;
 
   &:hover {
     background-color: $hover-bg-color;
