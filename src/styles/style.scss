@@ -1,0 +1,19 @@
+/* 
+
+  Planter Svelte Global CSS
+
+  Import mixins, functions, tokens, and stylesheets. 
+
+*/
+
+// Configruation
+@import 'tokens';
+@import 'functions';
+@import 'mixins';
+
+// Reset
+@import 'normalize';
+
+// Main
+@import 'base';
+@import 'grid';
