@@ -7,6 +7,11 @@
     readcv: 'https://read.cv/matthewia',
     github: 'https://github.com/matthew-ia',
   }
+
+  const newTabProps = {
+    target: '_blank',
+    rel: 'noopener',
+  }
 </script>
 
 <p>
@@ -16,8 +21,8 @@
 <p>Full site coming sometime 2023. (Probably.)</p>
 <p>In the meantime, check out<Br m/> 
   <span class="links">
-    <span class="link"><Button href={links.readcv}>read.cv<Arrow /></Button></span>
-    or <span class="link"><Button href={links.github}>GitHub<Arrow /></Button></span>
+    <span class="link"><Button href={links.readcv} {...newTabProps}>read.cv<Arrow /></Button></span>
+    or <span class="link"><Button href={links.github} {...newTabProps}>GitHub<Arrow /></Button></span>
   </span>
 </p>
 
