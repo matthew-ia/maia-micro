@@ -73,58 +73,62 @@
 
 button, 
 a {
+  
   // Theme
   // Default (fallback)
   $color: $white;
   $bg-color: $black;
-  $border: $border-width solid transparent;
   $hover-bg-color: rgba($black, 0.9);
+  $focus-outline: 2px solid $blue-100;
+
+  $border: $border-width solid transparent;
   $active-bg-color: $blue-600;
   $focus-outline: 2px solid $blue-600;
   $disabled-bg-color: $gray-100;
+
+  --btn-color: $white;
+  --btn-bg-color: $black;
+  --btn-hover-bg-color: rgba($black, 0.9);
+  --btn-focus-outline: 2px solid $blue-400;
+
   // Light
   @media (prefers-color-scheme: light) {
-    $color: $white;
-    $bg-color: $black;
-    $border: $border-width solid transparent;
-    $hover-bg-color: rgba($black, 0.9);
-    $active-bg-color: $blue-600;
-    $focus-outline: 2px solid $blue-600;
-    $disabled-bg-color: $gray-100;
+    --btn-color: #{$white};
+    --btn-bg-color: #{$black};
+    --btn-hover-bg-color: #{rgba($black, 0.85)};
+    --btn-focus-outline: 2px solid #{$blue-400};
   }
   // Dark
   @media (prefers-color-scheme: dark) {
-    $color: $black;
-    $bg-color: $white;
-    $border: $border-width solid transparent;
-    $hover-bg-color: rgba($white, 0.9);
-    $active-bg-color: $blue-600;
-    $focus-outline: 2px solid $blue-100;
-    $disabled-bg-color: $gray-100;
+    --btn-color: #{$black};
+    --btn-bg-color: #{$white};
+    --btn-hover-bg-color: #{rgba($white, 0.85)};
+    --btn-focus-outline: 2px solid #{$blue-100};
   }
-
-  color: $color;
-  background-color: $bg-color;
+  
   border: $border;
   border-radius: $border-radius;
   padding: .5rem 1.75rem .5rem 2rem;
   outline: 0;
-  transition: $animate-faster;
+  transition: $animate-fast;
   text-decoration: none;
   display: inline-block;
   font-size: 2rem;
   font-weight: 600;
-  
+
   @include bp-max(md) {
     font-size: 1.6rem;
   }
 
+  color: var(--btn-color);
+  background-color: var(--btn-bg-color);
+
   &:hover {
-    background-color: $hover-bg-color;
-    color: $color;
+    background-color: var(--btn-hover-bg-color);
+    color: var(--btn-color);
     cursor: pointer;
   }
-
+  
   &:active, &.pressed {
     background-color: $active-bg-color;
   }
@@ -132,7 +136,7 @@ a {
   &:focus-visible {
     border: $border;
     outline-offset: 2px;
-    outline: $focus-outline;
+    outline: var(--btn-focus-outline);
   }
 
   &.disabled {
