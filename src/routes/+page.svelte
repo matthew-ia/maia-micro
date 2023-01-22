@@ -13,6 +13,9 @@
     rel: 'noopener',
   }
 </script>
+<svelte:head>
+  <title>Matthew I. Alicea</title>
+</svelte:head>
 
 <p>
   <span class="name">Matthew I. Alicea</span> is a designer.<Br d /><Br m />
