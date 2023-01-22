@@ -114,6 +114,10 @@ a {
   display: inline-block;
   font-size: 2rem;
   font-weight: 600;
+  
+  @include bp-max(md) {
+    font-size: 1.6rem;
+  }
 
   &:hover {
     background-color: $hover-bg-color;
