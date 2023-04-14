@@ -22,8 +22,9 @@
 // $direction – the breakpoint direction (e.g. up, min);
 //              these map to min-width or max-width media queries
 //              Default: up (min-width)
+//              Values: up, down, min, max
 // 
-@mixin breakpoint($breakpoint, $direction: up) {
+@mixin breakpoint($breakpoint, $direction: down) {
   //check if the supplied breakpoint exists in our breakpoints map
   @if map-has-key($breakpoints, $breakpoint) {
     $breakpoint-value: map-get($breakpoints, $breakpoint);
@@ -133,23 +134,42 @@
   @else if $numArgs == 3 {
     $direction: list.nth($args, 3);
     @if $direction == between {
-      @include breakpoint-between(list.nth($arg, 1), list.nth($arg, 2)) { 
+      @include breakpoint-between(list.nth($args, 1), list.nth($args, 2)) { 
         @content;
       }
     }
   }
   @else if $numArgs == 2 {
-    @include breakpoint(list.nth($arg, 1), list.nth($arg, 2)) { 
+    @include breakpoint(list.nth($args, 1), list.nth($args, 2)) { 
       @content;
     }
   }
   @else if $numArgs == 1 {
-    @include breakpoint(list.nth($arg, 1)) { 
+    @include breakpoint(list.nth($args, 1)) { 
       @content;
     }
   }
   @else {
     @error 'Not enough arguments (0)';
+    @content;
+  }
+}
+
+// Custom Shorthands
+@mixin mobile($direction: down) {
+  @include bp(md, $direction) {
+    @content;
+  }
+}
+@mixin tablet($direction: down) {
+  @include bp(xl, $direction) {
+    @content;
+  }
+}
+// Only desktop 
+// (includes small desktops and large tablets
+@mixin desktop($direction: up) {
+  @include bp(xl, $direction) {
     @content;
   }
 }

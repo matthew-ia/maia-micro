@@ -10,18 +10,19 @@
 
 <style lang="scss">
   main {
-    padding: 0 150px;
+    padding: sp(0 10.5);
     display: flex;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 
     // Tablet
     @include bp-max(md) {
-      padding: 0 75px;
+      padding: sp(0 7.5);
+      min-height: unset;
     }
     // Mobile
     @include bp-max(sm) {
-      padding: 0 20px;
+      padding: sp(7.5 2);
     }
     
   }

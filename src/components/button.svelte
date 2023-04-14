@@ -108,13 +108,14 @@ a {
   
   border: $border;
   border-radius: $border-radius;
-  padding: .5rem 1.75rem .5rem 2rem;
+  // padding: .5rem 1.75rem .5rem 2rem;
+  padding: sp(.5 1 .5 1.25);
   outline: 0;
   transition: $animate-fast;
   text-decoration: none;
   display: inline-block;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500;
 
   @include bp-max(md) {
     font-size: 1.6rem;
