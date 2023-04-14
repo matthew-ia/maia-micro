@@ -32,6 +32,11 @@ $gray: #585858;
 $black: #252525;
 $white: $canvas !default;
 
+$dark: hsl(345, 34%, 21%);
+$darker: hsl(345, 34%, 15%);
+$light: hsl(346, 72%, 75%);;
+$lighter: hsl(346, 72%, 80%);
+
 // TINTS & SHADES (Variants)
 // ────────────────────────────────────
 // Generate extended color palette from the base colors

@@ -86,23 +86,23 @@ a {
   $focus-outline: 2px solid $blue-600;
   $disabled-bg-color: $gray-100;
 
-  --btn-color: $white;
-  --btn-bg-color: $black;
-  --btn-hover-bg-color: rgba($black, 0.9);
+  --btn-color: $light;
+  --btn-bg-color: $dark;
+  --btn-hover-bg-color: rgba($dark, 0.9);
   --btn-focus-outline: 2px solid $blue-400;
 
   // Light
   @media (prefers-color-scheme: light) {
-    --btn-color: #{$white};
-    --btn-bg-color: #{$black};
-    --btn-hover-bg-color: #{rgba($black, 0.85)};
+    --btn-color: #{$light};
+    --btn-bg-color: #{$dark};
+    --btn-hover-bg-color: #{$darker};
     --btn-focus-outline: 2px solid #{$blue-400};
   }
   // Dark
   @media (prefers-color-scheme: dark) {
-    --btn-color: #{$black};
-    --btn-bg-color: #{$white};
-    --btn-hover-bg-color: #{rgba($white, 0.85)};
+    --btn-color: #{$dark};
+    --btn-bg-color: #{$light};
+    --btn-hover-bg-color: #{$lighter};
     --btn-focus-outline: 2px solid #{$blue-100};
   }
   
@@ -131,7 +131,7 @@ a {
   }
   
   &:active, &.pressed {
-    background-color: $active-bg-color;
+    background-color: var(--btn-hover-bg-color);
   }
 
   &:focus-visible {
