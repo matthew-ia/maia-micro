@@ -155,20 +155,34 @@ code {
 // ────────────────────────────────────
 
 a:not(.unstyled) {
-  color: $link-color;
+  transition: $animate-faster;
+  // color: $link-color;
   text-decoration: $link-decoration;
   letter-spacing: $link-letter-spacing;
 
+  @media (prefers-color-scheme: light) {
+    color: $dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    color: $light;
+  }
+
   &:hover {
-    color: $link-hover-color;
+    // color: $link-hover-color;
+    @media (prefers-color-scheme: light) {
+      color: $dark-pop;
+    }
+    @media (prefers-color-scheme: dark) {
+      color: $light-pop;
+    }
     text-decoration: $link-hover-decoration;
-    background-color: $link-hover-background-color;
+    // background-color: $link-hover-background-color;
   }
 
   &:focus-visible {
     border-radius: $border-radius;
     outline-offset: 2px; 
-    outline: 2px solid $purple;
+    outline: 2px solid $white;
   }
 }
 
@@ -182,7 +196,6 @@ a:not(.unstyled) {
 }
 
 a:not([href]):not([class]) {
-
   &,
   &:hover {
     color: inherit;

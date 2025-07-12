@@ -14,6 +14,8 @@
     display: flex;
     align-items: center;
     min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
 
     // Tablet
     @include bp-max(md) {
