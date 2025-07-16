@@ -23,7 +23,7 @@
   I think the web is pretty neat and like creating things&nbsp;for&nbsp;it.
 </p>
 <p></p>
-<p>I'm currently working at Peter Millar, an American luxury apparel brand, as the UX Designer for our e-commerce websites. I design solutions that reduce friction, improve usability, and drive conversion—connecting user needs with business goals. I serve both the Peter Millar and G/FORE brands, designing e-commerce experiences that support each brand’s unique identity and customer needs.</p>
+<p>I'm currently working at Peter Millar, an American luxury menswear brand, as the UX Designer for our e-commerce websites. I design solutions that reduce friction, improve usability, and drive conversion—connecting user needs with business goals. I serve both the Peter Millar and G/FORE brands, designing e-commerce experiences that support each brand’s unique identity and customer needs.</p>
 <p>🚧 Full site coming sometime in <del>2023</del> 2025. (Probably.)</p>
 <p>In the meantime, <a href="{links.email}">email me</a> if you'd like to chat.</p>
 
